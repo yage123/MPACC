@@ -1,0 +1,248 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+<script type="text/javascript" src="/jquery/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+* {margin:0; padding:0;}
+body {font-size:12px; color:#222; font-family:Verdana,Arial,Helvetica,sans-serif; background:#f0f0f0;}
+.clearfix:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.clearfix {zoom:1;}
+ul,li {list-style:none;}
+img {border:0;}
+
+
+
+/* tmall focus */
+#focus {width:600px; height:300px; overflow:hidden; position:relative;z-index:1;}
+#focus ul {height:380px; position:absolute;}
+#focus ul li {float:left; width:600px; height:300px; overflow:hidden; position:relative; background:#000;}
+#focus ul li div {position:absolute; overflow:hidden;width:600px; height:300px;}
+#focus .btnBg {position:absolute; width:600px; height:40px; left:0; bottom:0; background:#000;}
+#focus .btn {position:absolute; width:600px; height:24px; left:0; bottom:8px; padding-left:10px;}
+#focus .btn span {display:inline-block; _display:inline; _zoom:1; width:24px; height:24px; line-height:24px; text-align:center; font-size:20px; font-family:"Microsoft YaHei",SimHei; margin-right:10px; cursor:pointer; color:#fff;}
+#focus .btn span.on {background:#000; color:#fcc;}
+#focus .preNext {width:45px; height:100px; position:absolute; top:90px; background:url(img/sprite.png) no-repeat 0 0; cursor:pointer;}
+#focus .pre {left:0;}
+#focus .next {right:0; background-position:right top;}
+
+
+
+
+
+#nav{height:40px; width:1056px; background-color:#b6ff00;margin:0 auto;position:relative;z-index:10;}
+#nav *{margin:0;padding:0;}
+#nav a{text-decoration:none;}
+/*一级菜单*/
+#nav ul{margin:0 auto;display:block;list-style-type:none;text-align:center;}
+#nav ul li{display:block;width:150px;height:40px; line-height:40px; float:left;text-align:center;border-right:solid 1px white;}
+#nav ul li:last-child{border-right:none;}
+#nav ul li:hover{background-color:red;}
+/*二级菜单*/
+#nav ul li ul{display:none;}
+#nav ul li ul li{width:120px; height:40px; line-height:40px;background-color:rgba(95, 181, 43, 0.50);border-bottom:solid 1px #808080;}
+#nav ul li:hover ul{display:block;position:relative;width:120px;}
+#nav ul li ul li:hover{background-color:red;}
+/*三级菜单*/
+#nav ul li:hover ul li ul{display:none;}
+#nav ul li:hover ul li:hover ul{display:block; position: relative; left: 120px; top: -30px;}
+#nav ul li:hover ul li:hover ul li{width:100px; height:30px; line-height: 30px;}
+#nav ul li:hover ul li:hover ul li:hover{background-color:red;}
+#title{
+	width:1056px;
+  	height:150px;
+  	background-color:red;
+	margin:0 auto;
+	}
+#div1{
+	width:250px;height:150px;display:inline-block;background:#0C0;
+	}
+#div2{
+	width:200px;height:150px;display:inline-block;background:#03C;
+	}
+#div3{
+	width:500px;height:150px;display:inline-block;background:#FF0;background-image:url(jxau.png);background-repeat:no-repeat;background-size:cover;margin-right:0px;
+	}
+#div4{
+	 width:1056px;height:300px; background-color:#b6ff00;margin:0 auto;margin-top:10px;
+	}
+#div5{
+	width:500px;height:200px;margin-top:5px;background:#C00;
+	}
+#div6{
+	width:500px;height:200px;margin-top:5px;background:#FF0;
+	}
+#div7{
+	width:541px;height:200px;margin-top:5px;background:#C00;
+	}
+#div8{
+	width:541px;height:200px;margin-top:5px;background:#C00;
+	}
+#div9{
+	width:500px;height:405px;background:#9CF;display:inline-block;
+	}
+#div10{
+	width:541px;height:405px;background:#9CF;display:inline-block;margin-left:10px;
+	}
+</style>
+</head>
+<body>
+<div>
+<div id="title">
+	<div id="div1">
+    	<a href="http://www.jxau.edu.cn/main.htm">
+		<img src="jxau.png" >
+		</a>
+	</div>
+	<div id="div2">	
+		<h2 align="center" style="vertical-align:true,line-height:50px">MPACC教育中心</h2>
+    </div>
+    <div id="div3">
+     
+    </div>
+</div>
+<div id="nav">
+    <ul style="a" >
+        <li ><a href="#">中心首页</a></li>
+        <li><a href="#">中心概况</a>
+            <ul>
+                <li><a href="#">中心简介</a></li>
+                <li><a href="#">师资队伍</a></li>
+            </ul>
+        </li>
+        <li><a href="#">新闻动态</a></li>
+        <li><a href="#">招生信息</a></li>
+        <li><a href="#">教学管理</a></li>
+        <li><a href="#">学生园地</a></li>
+        <li><a href="#">综合服务</a></li>
+    </ul>
+</div>
+<div id="div4">	
+
+	<div id="focus" >
+		<ul>
+			<li><a href="http://www.54173.cn/blog/?p=539"><img src="img/1.jpg" alt="QQ商城焦点图效果下载" /></a></li>
+			<li><a href="http://www.54173.cn/blog/?p=539"><img src="img/2.jpg" alt="QQ商城焦点图效果教程" /></a></li>
+
+			<li><a href="http://www.54173.cn/blog/?p=539"><img src="img/3.jpg" alt="jquery商城焦点图效果" /></a></li>
+			<li><a href="http://www.54173.cn/blog/?p=539"><img src="img/4.jpg" alt="jquery商城焦点图代码" /></a></li>
+			<li><a href="http://www.54173.cn/blog/?p=539"><img src="img/5.jpg" alt="jquery商城焦点图源码" /></a></li>
+		</ul>
+	</div>
+
+<div>
+<div id="div9">
+	<div id="div5">
+    
+    </div>
+	<div id="div6">
+    
+    </div>
+</div>
+<div id="div10">
+	<div id="div7">
+    
+    </div>
+	<div id="div8">
+    
+    </div>
+</div>
+</div>
+
+</div>
+</body>
+<script type="text/javascript">
+$(function() {
+	var sWidth = $("#focus").width(); //获取焦点图的宽度（显示面积）
+	var len = $("#focus ul li").length; //获取焦点图个数
+	var index = 0;
+	var picTimer;
+	
+	//以下代码添加数字按钮和按钮后的半透明长条
+	var btn = "<div class='btnBg'></div><div class='btn'>";
+	for(var i=0; i < len; i++) {
+		btn += "<span>" + (i+1) + "</span>";
+	}
+	btn += "</div><div class='preNext pre'></div><div class='preNext next'></div>";
+	$("#focus").append(btn);
+	$("#focus .btnBg").css("opacity",0.5);
+	
+	
+	//为数字按钮添加鼠标滑入事件，以显示相应的内容
+	$("#focus .btn span").mouseenter(function() {
+		index = $("#focus .btn span").index(this);
+		showPics(index);
+	}).eq(0).trigger("mouseenter");
+	
+	//上一页、下一页按钮透明度处理
+	$("#focus .preNext").css("opacity",0.2).hover(function() {
+		$(this).stop(true,false).animate({"opacity":"0.5"},300);
+	},function() {
+		$(this).stop(true,false).animate({"opacity":"0.2"},300);
+	});
+
+	//上一页按钮
+	$("#focus .pre").click(function() {
+		index -= 1;
+		if(index == -1) {index = len - 1;}
+		showPics(index);
+	});
+
+	//下一页按钮
+	$("#focus .next").click(function() {
+		index += 1;
+		if(index == len) {index = 0;}
+		showPics(index);
+	});
+	
+	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
+	$("#focus ul").css("width",sWidth * (len + 1));
+	
+	//鼠标滑入某li中的某div里，调整其同辈div元素的透明度，由于li的背景为黑色，所以会有变暗的效果
+	$("#focus ul li div").hover(function() {
+		$(this).siblings().css("opacity",0.7);
+	},function() {
+		$("#focus ul li div").css("opacity",1);
+	});
+	
+	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
+	$("#focus").hover(function() {
+		clearInterval(picTimer);
+	},function() {
+		picTimer = setInterval(function() {
+			if(index == len) { //如果索引值等于li元素个数，说明最后一张图播放完毕，接下来要显示第一张图，即调用showFirPic()，然后将索引值清零
+				showFirPic();
+				index = 0;
+			} else { //如果索引值不等于li元素个数，按普通状态切换，调用showPics()
+				showPics(index);
+			}
+			index++;
+		},3000); //此3000代表自动播放的间隔，单位：毫秒
+	}).trigger("mouseleave");
+	
+	//显示图片函数，根据接收的index值显示相应的内容
+	function showPics(index) { //普通切换
+		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},500); //通过animate()调整ul元素滚动到计算出的position
+		$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
+	}
+	
+	function showFirPic() { //最后一张图自动切换到第一张图时专用
+		$("#focus ul").append($("#focus ul li:first").clone());
+		var nowLeft = -len*sWidth; //通过li元素个数计算ul元素的left值，也就是最后一个li元素的右边
+		$("#focus ul").stop(true,false).animate({"left":nowLeft},500,function() {
+			//通过callback，在动画结束后把ul元素重新定位到起点，然后删除最后一个复制过去的元素
+			$("#focus ul").css("left","0");
+			$("#focus ul li:last").remove();
+		}); 
+		$("#focus .btn span").removeClass("on").eq(0).addClass("on"); //为第一个按钮添加选中的效果
+	}
+	
+});
+
+</script>
+
+
+</html>
